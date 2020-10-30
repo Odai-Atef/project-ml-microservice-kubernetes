@@ -1,0 +1,5 @@
+version: '3.3'
+services:
+    ai:
+     image: odaiatef/ai_model
+     ports: '8000:80' 
