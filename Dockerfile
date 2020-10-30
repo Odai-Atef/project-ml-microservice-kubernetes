@@ -2,11 +2,11 @@ FROM python:3.7.3-stretch
 
 ## Step 1:
 # Create a working directory
-WORKDIR /tmp/app
+WORKDIR /app
 
 ## Step 2:
 # Copy source code to working directory
-COPY . /tmp/app/
+COPY . app.py /app/
 ## Step 3:
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
