@@ -23,16 +23,13 @@ jobs:
             chmod +x hadolint
             cp hadolint /usr/bin/
             cp hadolint /bin/
-            chmod +x /bin/hadolint
-            . venv/bin/activate
-            make lint
       - save_cache:
           paths:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }} 
-    #   # run lint!
-    #   - run:
-    #       name: run lint
-    #       command: |
-    #         . venv/bin/activate
-    #         make lint
+      # run lint!
+      - run:
+          name: run lint
+          command: |
+            . venv/bin/activate
+            make lint
